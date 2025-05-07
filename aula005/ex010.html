@@ -7,6 +7,29 @@
 </head>
 <body>
     <h1>sistemas de multas</h1>
-    
+    vel:<input type="number" name="vel" id="vel">km/h 
+    <!-- caixinha de entra de dados numericos-->
+
+    <input type="button" value="verificar" onclick="calcular()"> 
+<!-- cria um botao html -->
+
+    <div id="rs"></div>
+
+    <script>
+        ('vel')
+        function calcular(){
+            var vel = window.document.getElementById('vel')
+
+            var res = window.document.querySelector('div#rs')
+            
+            var vel1 = Number(vel.value)
+
+            res.innerHTML = `<p>sua velocidade atual e ${vel1} km/h</p>`
+            if (vel1 > 60) {
+                res.innerHTML += `<p> voce esta sendo  <strong>mulTado </strong> seu vagabundo</p>`
+            }
+            res.innerHTML += ` <p>diriga sempre com cinto de segurança</p> `
+        }
+    </script>
 </body>
 </html>
