@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eventos DOM (domine espachion)</title>
+    <style>
+        div#area{
+            background-color: #28d628;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+      
+    </style>
 </head>
 <body>
-    <div id="area">
-        interaja...a
+    <div id="area" >
+        interaja...
     </div>
+    <script>
+        var a = window.document.getElementById('area')
+        
+        a.addEventListener('click',clica)
+        a.addEventListener('mouseenter',entra)
+        a.addEventListener('mouseout',sair)
+        
+        
+        function clica(){
+
+            a.innerText= 'voce ce atreveu '
+            a.style.color='#e212aa'
+            a.style.background='cyan'
+        }
+        function entra(){
+            a.innerText='quente'
+            a.style.color='red'
+            a.style.backgroundColor='orange'
+        }
+        function sair(){
+            a.innerText='frio'
+            a.style.color='white'
+            a.style.backgroundColor='blue'
+            
+        }
+
+    </script>
     
 </body>
 </html>
